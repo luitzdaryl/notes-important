@@ -1,6 +1,8 @@
 
 As a beginner, you have stumbled upon the newest and fastest-growing category in AI: Decision Models (frequently called System 1 AI Models). 
 To understand Jev, Laya, and Kev, you first need to understand the problem they solve. When you use a Large Language Model (LLM) like ChatGPT or Claude to categorize something (e.g., "Is this support ticket urgent?"), the LLM wastes time and money text-streaming an entire sentence like, "Yes, based on the context, this ticket is urgent." Your software then has to parse that sentence just to get a simple answer.  
+
+
 Decision models completely skip the talking. You give them messy information (like an email or logs) and a bounded question, and they instantly return a structured decision (a Choice, a Score, or a Yes/No answer) along with the exact statistical probability. LLMs generate; Decision Models decide. 
 
 ---
