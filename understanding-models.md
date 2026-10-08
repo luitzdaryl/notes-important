@@ -125,29 +125,40 @@ Each model type has a distinct job in modern AI engineering:
 * Examples: Llama 3, GPT-4o, Mistral.
 * Analog: The Writer / Speaker of the AI system. 
 
+---
+
 * The Job: Solving highly complex math, logic puzzles, or writing complicated code.
 * How they work: Instead of replying instantly, they pause for 10 to 30 seconds. They use a hidden "Chain of Thought" to talk to themselves, plan steps, test logic, and catch their own errors before showing you the final answer.
 * Examples: DeepSeek-R1, OpenAI o1 / o3.
 * Analog: The Philosopher / Deep Thinker. 
+
+---
 
 * The Job: Instantly categorizing, rating, or routing data.
 * How they work: As mentioned before, they do not talk. They are non-autoregressive. They process text in a single, parallel mathematical pass and immediately output structured probabilities (Yes/No, Choices, or Scores).
 * Examples: Jev, Laya, Kev.
 * Analog: The Bouncer / Quick Sorter. 
 
+---
+
 * The Job: Turning words, sentences, or entire documents into math so a computer can compare meanings.
 * How they work: They take a piece of text and turn it into a long list of numbers called a vector. If two words or concepts are similar (like "king" and "queen"), their vectors sit very close together in mathematical space. This powers RAG (Retrieval-Augmented Generation), allowing an AI to search through internal company documents.
 * Examples: Cohere Embed, OpenAI text-embedding-3.
 * Analog: The Librarian Index Card System. 
+
+---
 
 * The Job: Looking at images, charts, videos, or UI screens and understanding what is in them.
 * How they work: They bridge the gap between pixels and language, letting you pass an image and ask a text question like, "What does this chart mean?" or "Where is the exit sign?"
 * Examples: Qwen-VL, Llama Vision, Claude 3.5 Sonnet.
 * Analog: The Eyes of the system. 
 
+---
+
 * The Job: Acting on the real world instead of just talking about it.
 * How they work: While not always a completely separate model architecture, text models are specifically trained or fine-tuned to look at a user request and decide, "I don't know the answer, but I know how to use a calculator/database/API to get it." They output a structured command that triggers software to take action (e.g., booking a flight or checking the weather).
 * Analog: The Hands and Feet (Action Taker). 
+
 ---
 
 ## How they all work together in the real world
@@ -171,26 +182,35 @@ Historically, AI handled voice by chaining three different models together:
    3. Text-to-Speech (TTS) to read that reply out loud. 
 
 The modern AI audio landscape features highly specialized, dedicated audio categories split into Traditional/Modular Audio Models and Native Speech-to-Speech (Omni) Models. 
+
 ---
 
 * The Job: Listening to an audio file or live microphone feed and turning it into written text.
 * How it works: They map the waveforms of audio frequencies directly to words, bypassing the need to understand the meaning of the conversation. They are incredibly good at ignoring background noise, understanding heavy accents, and identifying different speakers.
 * Top Examples: [OpenAI Whisper](https://github.com/openai/whisper), Deepgram Nova-3, Gemini 3.5 Transcribe. 
 
+---
+
 * The Job: Taking raw text and turning it into a highly realistic, human-sounding voice.
 * How it works: Modern TTS models don't sound like robots anymore. They capture the "music" of human speech—including breathing, emotional tone, sarcasm, and natural pauses. They can also clone a human voice using just a few seconds of audio data.
 * Top Examples: [ElevenLabs Eleven v3](https://elevenlabs.io), Cartesia Sonic 3, Kokoro (open-source).  
 
+---
+
 * The Job: Generating full musical tracks, instruments, or cinematic sound effects from a text prompt.
 * How it works: Similar to how image generators create pixels out of noise, these models generate raw audio waveforms based on descriptions like "Upbeat 1980s synth-wave track with a heavy bassline".
 * Top Examples: Suno AI, Udio, Meta MusicGen. 
+
+---
 
 * The Job: Having fluid, near-instant, real-time voice conversations with zero lag.
 * How it works: Instead of converting speech to text first, these are natively multimodal. The neural network "hears" the audio directly and "speaks" audio directly back. Because they hear the raw audio, they can sense if you are laughing, crying, or interrupting them mid-sentence.
 * Top Examples: Gemini 3.8 Live, OpenAI Realtime API, Moshi (open-source). 
 
 ---
+
 ## Real-World Example: The "Smart Drive-Thru"
+
 Imagine you run an automated fast-food drive-thru. If you used text models, the latency would make customers angry. Instead, you deploy an audio stack:
 
    1. ASR Model (Whisper): Listens to a crackly car speaker over engine noise and perfectly transcribes: "Yeah, can I get uhh... a double cheeseburger, no pickles, and a large sprite?" 
